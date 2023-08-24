@@ -1,0 +1,24 @@
+---
+import { NavItems } from "../utils/navigations";
+---
+
+<nav
+  role="navigation"
+  aria-label="navigation"
+  id="nav"
+  class="border"
+>
+  <ul>
+    {
+      NavItems.map((item) => {
+        if (item.show) {
+          return (
+            <a href={item.route}>
+              <li>{item.title}</li>
+            </a>
+          )
+        } else return;
+      })
+    }
+  </ul>
+</nav>

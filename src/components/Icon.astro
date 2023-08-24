@@ -1,0 +1,12 @@
+---
+import { Icon } from "astro-icon";
+
+export interface Props {
+  name: string;
+  overrideClass?: string;
+}
+
+const { name, overrideClass } = Astro.props;
+---
+
+<Icon name={name} class={overrideClass} />
